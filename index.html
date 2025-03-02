@@ -83,6 +83,17 @@
         .small-images img:hover {
             transform: scale(1.1);
         }
+        .info-bar {
+            background: url('info-bar-bg.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
         .video-section {
             text-align: center;
             margin: 20px auto;
@@ -125,6 +136,10 @@
             .image-section, .details-section {
                 max-width: 100%;
             }
+            .info-bar {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -159,12 +174,12 @@
                 <li>Safety features</li>
                 <li>2-year warranty</li>
             </ul>
-            <div class="small-images">
-                <img src="blue.jpg" alt="CAD Design 1">
-                <img src="grey.jpg" alt="CAD Design 2">
-                <img src="red.jpg" alt="CAD Design 3">
-            </div>
         </div>
+    </div>
+    <div class="info-bar">
+        <span>Warranty: 2 Years</span>
+        <span>Price Range: $2000 - $5000</span>
+        <span>100% Customer Satisfaction</span>
     </div>
     <div class="video-section">
         <h2>Watch Our Product in Action</h2>
