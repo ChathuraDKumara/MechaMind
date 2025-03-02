@@ -47,25 +47,37 @@
             color: white;
             padding: 20px;
         }
-		.banner h1 {
-			font-size: 50px;
-			font-weight: bold;
-			margin-bottom: 5px; /* Reduce space below h1 */
-		}
-
-		.banner p {
-			font-size: 25px;
-			font-weight: bold;
-			margin-top: 5px; /* Reduce space above p */
-		}
+        .banner h1 {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .banner p {
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
         .container {
             display: flex;
             width: 100%;
             min-height: 100vh;
-            background: #E5E7EB;
+            position: relative;
             padding: 20px;
             box-sizing: border-box;
             align-items: flex-start;
+            background: url('wmremove-transformed (1).jpeg') no-repeat center center/cover;
+        }
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.6); /* Adds opacity to background */
+        }
+        .container > * {
+            position: relative;
         }
         .image-section {
             flex: 1;
@@ -89,7 +101,20 @@
             font-size: 28px;
         }
         .details-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .details-section ul li {
+            display: flex;
+            align-items: center;
             font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .details-section ul li::before {
+            content: "✔";
+            color: #37a400;
+            font-weight: bold;
+            margin-right: 10px;
         }
         .small-images {
             display: flex;
@@ -101,6 +126,22 @@
             width: 30%;
             height: auto;
             border-radius: 5px;
+        }
+        .price-banner {
+            background: #37a400;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .price-banner p {
+            margin: 5px 0;
         }
         .video-section {
             text-align: center;
@@ -121,25 +162,6 @@
             background: #E5E7EB;
             margin-top: 20px;
         }
-
-	    .price-banner {
-/*         background: url('price-banner.jpg') no-repeat center center/cover; */
-	background: #37a400;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        padding: 20px;
-        font-size: 22px;
-        font-weight: bold;
-    }
-    
-    .container {
-        background: url('wmremove-transformed (1).jpeg') no-repeat center center/cover;
-    }
     </style>
 </head>
 <body>
@@ -165,35 +187,29 @@
         <div class="details-section">
             <h2>Product Features</h2>
             <ul>
-                <li><strong>Eye-catching appearence:</strong> Pleasing design, smooth lines, and attractive color scheme </li>
-                <li><strong>High harvesting capacity:</strong> Able to pluck at least 5 kg of peppercorns per hour </li>
-                <li><strong>Long life time:</strong> Resistant to common environmental conditions </li>
-                <li><strong>High efficiency:</strong> Operates on a rechargeable battery with a runtime of at least 5 hours per charge </li>
-                <li><strong>Ease of use:</strong> User have the ability to operate the machine with minimal training </li>
-                <li><strong>Safety features:</strong> Blade guards and safety shutoff features to prevent accidents </li>
-                
+                <li>Eye-catching appearance: Pleasing design, smooth lines, and attractive color scheme</li>
+                <li>High harvesting capacity: Able to pluck at least 5 kg of peppercorns per hour</li>
+                <li>Long lifetime: Resistant to common environmental conditions</li>
+                <li>High efficiency: Operates on a rechargeable battery with a runtime of at least 5 hours per charge</li>
+                <li>Ease of use: Can be operated with minimal training</li>
+                <li>Safety features: Blade guards and safety shutoff features to prevent accidents</li>
             </ul>
-			<div class="small-images">
-        <img src="blue.jpg" alt="CAD Design 1">
-        <img src="grey.jpg" alt="CAD Design 2">
-        <img src="red.jpg" alt="CAD Design 3">
-    </div>
+            <div class="small-images">
+                <img src="blue.jpg" alt="CAD Design 1">
+                <img src="grey.jpg" alt="CAD Design 2">
+                <img src="red.jpg" alt="CAD Design 3">
+            </div>
         </div>
     </div>
     <div class="price-banner">
-    <h2>Affordable & Reliable</h2>
-    <p>5-Year Warranty on All Components!</p>
-    <p>We will provide free service for the first two years.</p>
-    <p>Rs. 35 000/= Only </p> 
-</div>
+        <h2>Affordable & Reliable</h2>
+        <p>5-Year Warranty on All Components!</p>
+        <p>We will provide free service for the first two years.</p>
+        <p>Rs. 35,000/= Only</p>
+    </div>
     <div class="video-section">
         <h2>Watch Our Product in Action</h2>
-<!--         <iframe width="560" height="315" 
-	    src="https://www.youtube.com/embed/X-wI_AI_u6k" 
-	    frameborder="0" allowfullscreen>
-	</iframe> -->
-	    <iframe width="560" height="315" src="https://www.youtube.com/embed/X-wI_AI_u6k?si=SKxyEOfMxpVZbIiR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/X-wI_AI_u6k?si=SKxyEOfMxpVZbIiR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div class="contact">
         <h2>Contact Us</h2>
