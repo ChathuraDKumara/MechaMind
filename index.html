@@ -47,18 +47,49 @@
             color: white;
             padding: 20px;
         }
+		.banner h1 {
+			font-size: 50px;
+			font-weight: bold;
+			margin-bottom: 5px; /* Reduce space below h1 */
+		}
+
+		.banner p {
+			font-size: 25px;
+			font-weight: bold;
+			margin-top: 5px; /* Reduce space above p */
+		}
         .container {
             display: flex;
             width: 100%;
             min-height: 100vh;
-            background: url('background.jpg') no-repeat center center/cover;
+            background: #E5E7EB;
             padding: 20px;
             box-sizing: border-box;
             align-items: flex-start;
         }
+        .image-section {
+            flex: 1;
+            padding: 10px;
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .details-section {
+            flex: 1;
+            padding: 50px;
+            background-color: #E5E7EB;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
         .details-section h2 {
             color: #1E3A8A;
             font-size: 28px;
+        }
+        .details-section ul {
+            font-size: 18px;
         }
         .small-images {
             display: flex;
@@ -71,20 +102,24 @@
             height: auto;
             border-radius: 5px;
         }
-        .info-bar {
-            background: url('bar-background.jpg') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 20px;
-            font-weight: bold;
-            margin: 20px 0;
-        }
         .video-section {
             text-align: center;
             margin-top: 20px;
             padding: 20px;
             background: #f4f4f4;
+        }
+        .footer {
+            background: #222;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact {
+            text-align: center;
+            padding: 20px;
+            background: #E5E7EB;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -105,33 +140,46 @@
         <p>Efficient, easy-to-use, and designed for modern farming.</p>
     </div>
     <div class="container">
+        <div class="image-section">
+            <img src="grey.jpg" alt="CAD Design">
+        </div>
         <div class="details-section">
             <h2>Product Features</h2>
             <ul>
-                <li><strong>Eye-catching appearance</strong></li>
-                <li><strong>High harvesting capacity</strong></li>
-                <li><strong>Long lifetime</strong></li>
-                <li><strong>High efficiency</strong></li>
-                <li><strong>Ease of use</strong></li>
-                <li><strong>Safety features</strong></li>
-                <li><strong>2-year warranty</strong></li>
+                <li><strong>Eye-catching appearence</strong> </li>
+                <li><strong>High harvesting capacity</strong> </li>
+                <li><strong>Long life time</strong> </li>
+                <li><strong>High efficiency</strong> </li>
+                <li><strong>Ease of use</strong> </li>
+                <li><strong>Safety features</strong> </li>
+                <li><strong>2 year warranty</strong> </li>
+                
             </ul>
-            <div class="small-images">
-                <img src="blue.jpg" alt="CAD Design 1">
-                <img src="grey.jpg" alt="CAD Design 2">
-                <img src="red.jpg" alt="CAD Design 3">
-            </div>
+			<div class="small-images">
+        <img src="blue.jpg" alt="CAD Design 1">
+        <img src="grey.jpg" alt="CAD Design 2">
+        <img src="red.jpg" alt="CAD Design 3">
+    </div>
         </div>
     </div>
-    <div class="info-bar">
-        Price: LKR 35,000 | Warranty: 2 Years | Free service for the first 3 years
-    </div>
+    
     <div class="video-section">
         <h2>Watch Our Product in Action</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/X-wI_AI_u6k?si=SKxyEOfMxpVZbIiR" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
+<!--         <iframe width="560" height="315" 
+	    src="https://www.youtube.com/embed/X-wI_AI_u6k" 
+	    frameborder="0" allowfullscreen>
+	</iframe> -->
+	    <iframe width="560" height="315" src="https://www.youtube.com/embed/X-wI_AI_u6k?si=SKxyEOfMxpVZbIiR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@mechamind.com</p>
+        <p>Phone: +94 70 444 6889</p>
+        <p>Address: 54/A, Wakwella Road, Hapugala, Galle, Sri Lanka</p>
+    </div>
+    <div class="footer">
+        &copy; 2025 Mechamind. All rights reserved.
     </div>
 </body>
 </html>
